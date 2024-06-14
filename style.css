@@ -20,14 +20,21 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  height: 100vh;
+  min-height: 100vh;
   font-family: 'Poppins', sans-serif;
   text-align: center;
-  font-size: 15px;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
 }
 
 h1 {
-  font-size: 1.5rem;
+  font-size: 1.25rem;
 }
 
 .heading-1 {
@@ -37,19 +44,89 @@ h1 {
 
 .heading-2 {
   margin-top: 0;
+  color: var(--very-dark-blue);
 }
 
 .para {
-  font-weight: 200;
-  padding: 0 1rem;
+  color: var(--grayish-blue);
+  font-size: 0.8rem;
   margin-bottom: 4rem;
 }
 
+hgroup {
+  max-width: 500px;
+}
+
 .cards-container {
-  display: grid;
-  gap: 20px;
-  grid-template-columns: 1fr;
-  background-color: white;
-  margin: 20px;
+  position: relative;
+}
+
+div {
+  width: 290px;
+  background-color: #fff;
+  border-radius: 5px;
+  box-shadow: 0 4px 8px var(--grayish-blue);
   text-align: left;
+  margin-bottom: 30px;
+  padding: 30px;
+}
+
+div h3 {
+  margin: 0 auto;
+}
+
+div p {
+  color: var(--grayish-blue);
+  margin-top: 5px;
+  font-size: 0.7rem;
+  margin-bottom: 20px;
+}
+
+img {
+  max-height: 50px;
+}
+
+figure {
+  display: flex;
+  justify-content: end;
+  align-items: end;
+  margin: 0;
+}
+
+.box-1 {
+  border-top: 4px solid var(--cyan);
+}
+
+.box-2 {
+  border-top: 4px solid var(--red);
+}
+
+.box-3 {
+  border-top: 4px solid var(--orange);
+}
+
+.box-4 {
+  border-top: 4px solid var(--blue);
+}
+
+@media (min-width: 60rem) {
+  div {
+    max-width: 350px;
+  }
+
+  .box-1 {
+    position: absolute;
+    right: 320px;
+    top: 120px;
+  }
+
+  .box-4 {
+    position: absolute;
+    left: 320px;
+    top: 120px;
+  }
+
+  h1 {
+    font-size: 2rem;
+  }
 }
